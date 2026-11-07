@@ -1,0 +1,11 @@
+# dsh-agent-hub —— DSH bundle patch
+# 装上之后，profile 在 dsh.profile.bundles 里列出本包名即生效。
+#
+# 本插件做三件事：
+#   1. 读 ~/.dsh/agents/agents.json，把每个启用的 agent 注册成 DSH 原生 agent preset
+#   2. 提供 /api/agent-hub/* 给工作台做管理界面
+#   3. 客户端在输入栏挂一个 agent 选择器（可在工作台开关）
+- insert:
+    - id: agent-hub
+      name: dsh-agent-hub
+      config: {}

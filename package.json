@@ -1,0 +1,29 @@
+{
+  "name": "dsh-agent-hub",
+  "version": "0.1.0",
+  "private": true,
+  "description": "把插件和技能分类成不同功能的 Agent（基于 DSH 原生 agent preset），带工作台管理界面和输入栏选择器。",
+  "type": "module",
+  "main": "./index.js",
+  "exports": {
+    ".": "./index.js",
+    "./client": "./client.js",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "index.js",
+    "client.js",
+    "cordis.patch.yml",
+    "agents.default.json",
+    "README.md"
+  ],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web"
+    }
+  },
+  "license": "MIT"
+}
