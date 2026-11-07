@@ -73,3 +73,17 @@ DSH 升级后如果 standard 的插件列表变了，这里要跟着改，否则
 - 重载（`/reload`）会重建 preset，但已开始的会话不受影响
 - 不是所有插件都适合放进 preset：只有 agent 级插件（工具、提示词）能这样组合；
   带面板/路由的 Host 插件（如 douyin-lite）仍全局生效，agent 只是「知道它存在 + persona 指向它」
+
+## 为什么会有这个
+
+插件和技能越装越多以后，每次开对话都要重新说一遍「今天干哪摊事」。
+这个插件把**场景**固化成 Agent：选一个，persona、可用工具、技能清单一起切过去。
+
+管理界面和开关全在本地（JSON 文件 + 127.0.0.1 的 HTTP 接口），
+切换和查看**不产生模型调用**——只有 agent 真正干活时才消耗 token。
+
+## 关键词
+
+DSH 插件 · DeepSeek Harness · agent preset · 插件系统 · Agent 编排 ·
+场景化 Agent · 输入栏选择器 · 工作台管理面板 · 本地优先 · 零额外 token ·
+一键切换 Agent · cordis 插件 · JavaScript · Windows · 工作流分类
